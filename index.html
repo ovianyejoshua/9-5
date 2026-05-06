@@ -3,299 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why You Earn Exactly What You Earn</title>
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+<title>Why Your Salary Stays The Same No Matter How Hard You Work</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-  :root {
-    --bg: #f8f5f0;
-    --ink: #141210;
-    --muted: #6b6560;
-    --rule: #ddd8d0;
-    --paper-dark: #ede9e2;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-    line-height: 1.8;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .wrap {
-    max-width: 660px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  header {
-    padding: 52px 0 44px;
-    border-bottom: 1px solid var(--rule);
-    margin-bottom: 60px;
-  }
-
-  .label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .section {
-    margin-bottom: 52px;
-    opacity: 0;
-    transform: translateY(14px);
-    animation: fadeUp 0.65s ease forwards;
-  }
-
-  .section:nth-child(1) { animation-delay: 0.05s; }
-  .section:nth-child(2) { animation-delay: 0.12s; }
-  .section:nth-child(3) { animation-delay: 0.19s; }
-  .section:nth-child(4) { animation-delay: 0.26s; }
-  .section:nth-child(5) { animation-delay: 0.33s; }
-  .section:nth-child(6) { animation-delay: 0.40s; }
-  .section:nth-child(7) { animation-delay: 0.47s; }
-  .section:nth-child(8) { animation-delay: 0.54s; }
-  .section:nth-child(9) { animation-delay: 0.61s; }
-
-  h1 {
-    font-family: 'Lora', serif;
-    font-size: clamp(30px, 5.5vw, 46px);
-    font-weight: 600;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-    margin-bottom: 28px;
-  }
-
-  h1 em {
-    font-style: italic;
-    font-weight: 400;
-  }
-
-  h2 {
-    font-family: 'Lora', serif;
-    font-size: clamp(19px, 3vw, 24px);
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 20px;
-  }
-
-  p {
-    margin-bottom: 20px;
-    color: var(--ink);
-  }
-
-  p:last-child { margin-bottom: 0; }
-
-  strong { font-weight: 500; }
-
-  em { font-style: italic; }
-
-  .pull {
-    font-family: 'Lora', serif;
-    font-size: clamp(20px, 3.2vw, 26px);
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.45;
-    border-left: 3px solid var(--ink);
-    padding: 4px 0 4px 24px;
-    margin: 40px 0;
-  }
-
-  .example {
-    background: var(--paper-dark);
-    border-radius: 3px;
-    padding: 28px 32px;
-    margin: 32px 0;
-  }
-
-  .example-tag {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 16px;
-  }
-
-  .example p {
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 16px;
-  }
-
-  .example p:last-child { margin-bottom: 0; }
-
-  hr {
-    border: none;
-    border-top: 1px solid var(--rule);
-    margin: 56px 0;
-  }
-
-  .questions {
-    margin: 28px 0;
-  }
-
-  .questions p {
-    padding: 14px 0 14px 22px;
-    border-bottom: 1px solid var(--rule);
-    font-size: 16px;
-    position: relative;
-    margin-bottom: 0;
-  }
-
-  .questions p::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--muted);
-    font-size: 13px;
-    top: 18px;
-  }
-
-  .questions p:last-child { border-bottom: none; }
-
-  .cta-section {
-    padding: 52px 0 80px;
-    border-top: 1px solid var(--rule);
-  }
-
-  .cta-heading {
-    font-family: 'Lora', serif;
-    font-size: clamp(22px, 3.5vw, 30px);
-    font-weight: 600;
-    line-height: 1.25;
-    margin-bottom: 10px;
-  }
-
-  .cta-sub {
-    color: var(--muted);
-    font-size: 15px;
-    margin-bottom: 36px;
-    line-height: 1.6;
-  }
-
-  .cta-primary {
-    display: block;
-    background: var(--ink);
-    color: #f8f5f0;
-    text-decoration: none;
-    padding: 28px 32px;
-    border-radius: 3px;
-    margin-bottom: 16px;
-    transition: opacity 0.2s ease, transform 0.15s ease;
-  }
-
-  .cta-primary:hover {
-    opacity: 0.88;
-    transform: translateY(-2px);
-  }
-
-  .cta-primary-label {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.55;
-    margin-bottom: 8px;
-  }
-
-  .cta-primary-title {
-    font-family: 'Lora', serif;
-    font-size: 21px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-
-  .cta-primary-desc {
-    font-size: 14px;
-    opacity: 0.72;
-    line-height: 1.6;
-    margin-bottom: 22px;
-  }
-
-  .cta-primary-btn {
-    display: inline-block;
-    background: #f8f5f0;
-    color: var(--ink);
-    font-size: 14px;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 2px;
-    letter-spacing: 0.02em;
-  }
-
-  .cta-primary-micro {
-    font-size: 12px;
-    opacity: 0.4;
-    margin-top: 12px;
-  }
-
-  .cta-secondary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    border: 1px solid var(--rule);
-    border-radius: 3px;
-    padding: 20px 24px;
-    text-decoration: none;
-    color: var(--ink);
-    transition: border-color 0.2s ease, background 0.2s ease;
-  }
-
-  .cta-secondary:hover {
-    border-color: var(--ink);
-    background: var(--paper-dark);
-  }
-
-  .cta-secondary-text {
-    font-size: 14px;
-    line-height: 1.55;
-    color: var(--muted);
-  }
-
-  .cta-secondary-text strong {
-    display: block;
-    color: var(--ink);
-    font-size: 15px;
-    margin-bottom: 4px;
-    font-weight: 500;
-  }
-
-  .cta-secondary-arrow {
-    font-size: 20px;
-    color: var(--muted);
-    flex-shrink: 0;
-  }
-
-  .page-footer {
-    text-align: center;
-    padding: 0 0 80px;
-    font-family: 'Lora', serif;
-    font-size: clamp(15px, 2vw, 18px);
-    font-style: italic;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
-
-
- <!-- Microsoft Clarity -->
+<!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -303,8 +15,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wmr57jzl5e");
 </script>
-<!-- End Microsoft Clarity -->
- 
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -317,106 +28,564 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1269545861555193');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: '9-5 Landing Page',
+  content_category: 'Book Funnel'
+});
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1269545861555193&ev=PageView&noscript=1"
-/></noscript>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f8f5f0;
+    --ink: #141210;
+    --muted: #6b6560;
+    --rule: #ddd8d0;
+    --paper-dark: #ede9e2;
+    --accent: #141210;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 52px 0 44px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 64px;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    margin-bottom: 56px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .section:nth-child(1) { animation-delay: 0.05s; }
+  .section:nth-child(2) { animation-delay: 0.15s; }
+  .section:nth-child(3) { animation-delay: 0.25s; }
+  .section:nth-child(4) { animation-delay: 0.35s; }
+  .section:nth-child(5) { animation-delay: 0.45s; }
+
+  /* ── TYPOGRAPHY ── */
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 600;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: clamp(18px, 2.8vw, 23px);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  p { margin-bottom: 20px; }
+  p:last-child { margin-bottom: 0; }
+  em { font-style: italic; }
+  strong { font-weight: 500; }
+
+  /* ── PULL ── */
+  .pull {
+    font-family: 'Lora', serif;
+    font-size: clamp(19px, 3vw, 24px);
+    font-style: italic;
+    line-height: 1.45;
+    border-left: 3px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 36px 0;
+  }
+
+  /* ── EXAMPLE ── */
+  .example {
+    background: var(--paper-dark);
+    border-radius: 3px;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+
+  .example-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .example p { font-size: 16px; line-height: 1.75; margin-bottom: 16px; }
+  .example p:last-child { margin-bottom: 0; }
+
+  /* ── RULE ── */
+  hr { border: none; border-top: 1px solid var(--rule); margin: 56px 0; }
+
+  /* ── TEST SECTION ── */
+  .test-wrap {
+    background: var(--paper-dark);
+    border-radius: 4px;
+    padding: 36px 32px;
+    margin: 32px 0;
+  }
+
+  .test-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .question {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .question:last-of-type {
+    margin-bottom: 32px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .question-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    font-weight: 400;
+  }
+
+  .question-num {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 10px;
+  }
+
+  .answer-btn {
+    padding: 10px 28px;
+    border-radius: 2px;
+    border: 1px solid var(--rule);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.02em;
+  }
+
+  .answer-btn:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .answer-btn.selected-yes {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  .answer-btn.selected-no {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  /* ── SUBMIT BTN ── */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s ease;
+    margin-top: 8px;
+  }
+
+  .submit-btn:hover { opacity: 0.85; }
+  .submit-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  /* ── RESULT ── */
+  .result-wrap {
+    display: none;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  .result-wrap.visible { display: block; }
+
+  .result-score {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .result-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(18px, 2.8vw, 22px);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .result-body { font-size: 16px; line-height: 1.8; }
+  .result-body p { margin-bottom: 16px; }
+  .result-body p:last-child { margin-bottom: 0; }
+
+  /* ── BOOK SECTION ── */
+  .book-section {
+    margin-top: 56px;
+  }
+
+  .book-questions {
+    margin: 28px 0;
+  }
+
+  .book-q {
+    padding: 16px 0 16px 22px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 16px;
+    line-height: 1.65;
+    position: relative;
+  }
+
+  .book-q::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+    font-size: 13px;
+    top: 19px;
+  }
+
+  .book-q:last-child { border-bottom: none; }
+
+  .book-q-detail {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  /* ── CTA ── */
+  .cta-wrap {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .cta-book {
+    display: block;
+    background: var(--ink);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 28px 32px;
+    border-radius: 3px;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+  }
+
+  .cta-book:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+  }
+
+  .cta-book-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 8px;
+  }
+
+  .cta-book-title {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .cta-book-desc {
+    font-size: 14px;
+    opacity: 0.72;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .cta-book-btn {
+    display: inline-block;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+  }
+
+  .cta-book-micro {
+    font-size: 12px;
+    opacity: 0.4;
+    margin-top: 12px;
+  }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    text-align: center;
+    padding: 64px 0 80px;
+    font-family: 'Lora', serif;
+    font-size: clamp(15px, 2vw, 18px);
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── ANIMATION ── */
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <div class="label">If you work a 9-5, read this carefully.</div>
+    <div class="label">If you work a 9-5 in Nigeria, read this carefully.</div>
   </header>
 
   <main>
 
+    <!-- SECTION 1: THE ANSWER -->
     <div class="section">
-      <h1>IT'S SALARY WEEK AND <em>YOUR SALARY CAME IN.</em></h1>
-      <p>But you already know it won't last.</p>
-      <p>Not because you're careless or because you spend on things you shouldn't — but because you've done this math before. Rent, data, transport, whatever you've been owing someone, the thing at home that needs fixing, food, family, light, water.</p>
-      <p>You already know this can only last two weeks. Maybe a little more if you're careful. Maybe less if something unexpected shows up — and something unexpected always shows up.</p>
-      <p>So you receive your salary and immediately start surviving.</p>
+      <h1>The reason your salary stays the same no matter how hard you work is not about you.</h1>
+      <p>It is not your performance or your attitude. It is not that you haven't found the right company yet or that you need to be more patient or that your time is coming.</p>
+      <p>It is your container.</p>
     </div>
 
     <hr>
 
+    <!-- SECTION 2: WHAT IS A CONTAINER -->
     <div class="section">
-      <p>Sometimes you think to yourself — maybe I need a better job. Higher salary, different company, fresh start. Or maybe a side hustle. But that's not really easy, is it? That's more work added to the work you already have.</p>
-      <p>It's stressful. Life is stressful.</p>
-    </div>
+      <h2>What is a container?</h2>
+      <p>Your container is the structure your work sits inside. It is how your job is arranged to pay you. And it is this structure — not your skill, not your effort, not your excellence — that determines how much you can ever earn before you even begin.</p>
 
-    <div class="section">
-      <p>Now you see someone else. Maybe someone you know. Maybe someone on your timeline.</p>
-      <p>And you know this person doesn't work harder than you. You know they're not smarter than you. But for some reason you can't fully explain, they're earning more. They earn in a week what takes you a month. And you know they're not doing anything shady.</p>
-      <div class="pull">So what is it? What are they doing that you're not?</div>
-      <p>It's structure. I call it a container — but it's just structure.</p>
-    </div>
-
-    <hr>
-
-    <div class="section">
-      <h2>The reason you earn what you earn.</h2>
-      <p>Some jobs are designed in a way that allows the people inside them to earn more than others ever could. Same degree. Same work ethic. Completely different ceiling.</p>
       <div class="example">
         <div class="example-tag">For example</div>
-        <p>Two people leave university with the same degree. Both go into finance. One joins a bank as a staff member — fixed salary, fixed increment, fixed career ladder. He works hard. Gets promoted. But he cannot earn past a certain amount. That's his ceiling.</p>
-        <p>The other eventually moves into financial consulting. He charges clients directly for advice that saves or makes them significant money. He charges a percentage of the outcome. His income has no ceiling. He can make in one week what the first person earns in a month.</p>
-        <p>What's the difference? Not hard work. Not grades. Not intelligence. The difference is the structure they're both working hard inside. The container.</p>
+        <p>Two people leave university with the same degree. Both go into finance. One joins a bank as a staff member. He has a fixed salary, fixed increment, and fixed career ladder. He works hard, gets promoted, but he can't earn past a certain amount. That's his ceiling.</p>
+        <p>The other one eventually moves into financial consulting. They charge clients directly for advice that saves or makes those clients significant money. They charge the clients a percentage for the outcome. His income has no ceiling. He can make what the first person earns monthly in a week.</p>
+        <p>What's the difference between them? It is clearly not hard work, or their grade, or how smart they are. The difference is where they both work hard in. The structure. The container. How their work is arranged to pay them.</p>
       </div>
-      <p>That is the reason you earn what you earn.</p>
-    </div>
 
-    <div class="section">
-      <p>Let's make this personal. If your company made an extra 5 million naira in revenue this month — would you benefit from it? Would your salary change to reflect that?</p>
-      <div class="pull">If your answer is no, you are inside a container.</div>
-      <p>A structure designed to pay you not what you deserve, but what someone above you — HR, a manager, a salary band written before you ever arrived — decided your role is worth. Your performance moves you within that band. But the band itself was decided before you showed up.</p>
+      <p>Now most times this is decided before you are hired. So how do you know if your job arrangement is designed to pay you less than what your work is worth?</p>
     </div>
 
     <hr>
 
+    <!-- SECTION 3: THE TEST -->
     <div class="section">
-      <p>If you're thinking the solution is just changing jobs or working harder — you're not yet seeing it. A better job is usually the same container with a slightly higher ceiling. A side hustle built on the same time-for-money logic hits its own ceiling fast. Working harder inside a structure that was never designed to reward harder work just makes you better at something that doesn't pay you more for being better.</p>
-      <p>And so the real questions begin.</p>
-      <div class="questions">
-        <p>Does your specific job have a ceiling — or can it actually be broken from the inside?</p>
-        <p>If it can be broken, what exactly do you do? And if it can't, what then — just quit?</p>
-        <p>Is it already too late after the years you have already spent here?</p>
-        <p>Did the person earning more than you do something specific that you didn't — or did they just get lucky?</p>
-        <p>Is asking for a raise again even worth it — or was the last time it went nowhere a sign of something structural?</p>
-        <p>Is this just going to tell you to work harder or start a business?</p>
-      </div>
-    </div>
+      <h2>Find out if your arrangement has a ceiling.</h2>
+      <p>Answer these five questions honestly. Your result appears immediately.</p>
 
-    <hr>
+      <div class="test-wrap">
+        <div class="test-label">The Ceiling Check — 5 Questions</div>
 
-    <div class="section">
-      <p><em>You Work Hard But You Are Still Broke</em> answers every one of these questions.  I don't mean general terms. For your exact situation — your role, your company structure, your salary arrangement, your options from exactly where you currently stand.</p>
-      <p>It tells you how to diagnose whether your ceiling can be broken from inside and what the specific moves are if it can. It shows you how to make your contribution visible to the exact people whose decisions control your income — and how to walk into the salary conversation with documented evidence instead of feelings. It tells you honestly what the move is if the ceiling is structural and cannot be broken — and how to make that transition without losing everything you have built while you do.</p>
-      <p>It does not tell you to quit tomorrow. It tells you exactly what your situation is and exactly what to do about it.</p>
-      <p><strong>You've been in this cycle long enough.</strong> The next salary alert doesn't have to feel the same way this one did.</p>
-    </div>
-
-    <div class="cta-section section">
-      <h2 class="cta-heading">Read it this weekend.</h2>
-      <p class="cta-sub">14 chapters. 180 pages. Written specifically for someone in a 9-5. It starts where this page ends and goes much further.</p>
-
-      <a href="https://selar.com/l302z347v8" class="cta-primary">
-        <div class="cta-primary-label">The Book</div>
-        <div class="cta-primary-title">You Work Hard But You're Still Broke</div>
-        <div class="cta-primary-desc">The complete framework. Why your ceiling sits where it sits, whether it can be broken from inside, and every practical move available to you from exactly where you stand right now.</div>
-        <div class="cta-primary-btn">Get the Book — ₦5,000 →</div>
-        <div class="cta-primary-micro">Read it in a weekend. The cycle ends when you understand it.</div>
-      </a>
-
-      <a href="https://ceiling-audit.vercel.app/" class="cta-secondary">
-        <div class="cta-secondary-text">
-          <strong>Not ready yet? Take the free test first.</strong>
-          The Ceiling Audit analyses your specific situation in 5 minutes and tells you exactly what your ceiling is made of.
+        <div class="question" id="q1">
+          <div class="question-num">Question 1 of 5</div>
+          <div class="question-text">Does your salary stay the same regardless of how much revenue your company generates?</div>
+          <div class="btn-group">
+            <button class="answer-btn" onclick="answer(1,'yes',this)">Yes</button>
+            <button class="answer-btn" onclick="answer(1,'no',this)">No</button>
+          </div>
         </div>
-        <div class="cta-secondary-arrow">→</div>
-      </a>
+
+        <div class="question" id="q2">
+          <div class="question-num">Question 2 of 5</div>
+          <div class="question-text">Could your company replace the specific things you do within two weeks of you leaving?</div>
+          <div class="btn-group">
+            <button class="answer-btn" onclick="answer(2,'yes',this)">Yes</button>
+            <button class="answer-btn" onclick="answer(2,'no',this)">No</button>
+          </div>
+        </div>
+
+        <div class="question" id="q3">
+          <div class="question-num">Question 3 of 5</div>
+          <div class="question-text">Have you ever exceeded your targets and still received the same salary or a raise below 15%?</div>
+          <div class="btn-group">
+            <button class="answer-btn" onclick="answer(3,'yes',this)">Yes</button>
+            <button class="answer-btn" onclick="answer(3,'no',this)">No</button>
+          </div>
+        </div>
+
+        <div class="question" id="q4">
+          <div class="question-num">Question 4 of 5</div>
+          <div class="question-text">Does your pay stay the same even when you deliver extra value beyond what is expected?</div>
+          <div class="btn-group">
+            <button class="answer-btn" onclick="answer(4,'yes',this)">Yes</button>
+            <button class="answer-btn" onclick="answer(4,'no',this)">No</button>
+          </div>
+        </div>
+
+        <div class="question" id="q5">
+          <div class="question-num">Question 5 of 5</div>
+          <div class="question-text">Have you been in your current job for over a year with no significant income jump?</div>
+          <div class="btn-group">
+            <button class="answer-btn" onclick="answer(5,'yes',this)">Yes</button>
+            <button class="answer-btn" onclick="answer(5,'no',this)">No</button>
+          </div>
+        </div>
+
+        <button class="submit-btn" id="submitBtn" onclick="showResult()" disabled>See My Result →</button>
+
+        <!-- RESULT: 4-5 NOs -->
+        <div class="result-wrap" id="result-high">
+          <div class="result-score">Your Score: Structural Ceiling</div>
+          <div class="result-title">Your job arrangement was not designed to pay you what you're worth.</div>
+          <div class="result-body">
+            <p>Not because you're not good enough — but because the structure you're inside was built before you arrived, and it has a hard limit on what it can ever pay you, regardless of how excellent you become.</p>
+            <p>Your job has a ceiling. And working harder inside it will not move it.</p>
+            <p>There are only two moves available to you. Either you find the specific things inside your current arrangement that you can do to raise the ceiling and earn more — they exist in some arrangements, not all — or you understand exactly what a better structure looks like and how to move toward it without losing everything you've built while you do.</p>
+            <p>Both of those moves are in the book.</p>
+          </div>
+        </div>
+
+        <!-- RESULT: 2-3 NOs -->
+        <div class="result-wrap" id="result-mid">
+          <div class="result-score">Your Score: Partial Ceiling</div>
+          <div class="result-title">Your arrangement has some flexibility — but it also has walls you may not have found yet.</div>
+          <div class="result-body">
+            <p>Some parts of how you earn are working in your favour. Others are quietly capping your earnings in ways you haven't identified clearly.</p>
+            <p>Partial ceilings are often the most dangerous. They give you just enough movement to stay comfortable while the real limit sits quietly above you.</p>
+            <p>What you need is a specific diagnosis of which parts of your arrangement are working and which ones are quietly working against you. The book gives you exactly that — so you can double down on what's already in your favour and fix what isn't before it costs you years.</p>
+          </div>
+        </div>
+
+        <!-- RESULT: 0-1 NOs -->
+        <div class="result-wrap" id="result-low">
+          <div class="result-score">Your Score: Room to Grow</div>
+          <div class="result-title">You're in a better structural position than most people in a 9-5.</div>
+          <div class="result-body">
+            <p>Your pay has some connection to what you produce. That matters more than most people realise.</p>
+            <p>But this score doesn't tell you how much room you actually have. It doesn't tell you whether you're approaching the real ceiling without knowing it. And it doesn't show you what a structurally superior arrangement looks like — so you can see clearly what your best move should be.</p>
+            <p>The book gives you that full picture. Not to convince you to leave — but to make sure whatever you decide next is a structural decision and not a guess.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 4: THE BOOK -->
+    <div class="section book-section" id="bookSection" style="display:none; opacity:0; transform:translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease;">
+      <h2>Here is what the book answers specifically.</h2>
+      <p><em>You Work Hard But You Are Still Broke</em> was written specifically to answer what comes next. Not in general terms — for your exact situation as someone in a 9-5.</p>
+
+      <div class="book-questions">
+
+        <div class="book-q">
+          How do I know if my specific job can be broken from the inside — or whether the ceiling is structural and no amount of effort will ever move it?
+          <div class="book-q-detail">One of the biggest mistakes people make is staying in a job designed to limit them because they hope it will get better. My father spent twenty years in such an arrangement. He eventually left without a dime. This book tells you how not to end up there.</div>
+        </div>
+
+        <div class="book-q">
+          How do I make my contribution visible to the exact people whose decisions control my income?
+          <div class="book-q-detail">Most people do good work but stay where they are because they don't know how to make their work visible to the people that matter. Value without visibility is useless.</div>
+        </div>
+
+        <div class="book-q">
+          How do I walk into the salary conversation with evidence instead of feelings — and actually get a different response this time?
+          <div class="book-q-detail">There is a method to it. A proof document — showing your specific and measurable contribution to the company's goals. This book shows you how to build that document and how to use it.</div>
+        </div>
+
+        <div class="book-q">
+          How do I recognise a bad container before I walk into it?
+          <div class="book-q-detail">How do you evaluate a job offer or career move through these tests before you commit years of your life to it? We only have a few years on earth. This book shows you how to avoid wasting them in the wrong arrangement.</div>
+        </div>
+
+        <div class="book-q">
+          What do I actually do if my container cannot pay me more — and how do I make the transition without losing what I have while I cross it?
+          <div class="book-q-detail">One reason people stay in bad arrangements is that they don't know how to leave safely. This book shows you the correct way to transition without putting yourself at risk.</div>
+        </div>
+
+        <div class="book-q">
+          How do I stop being replaceable?
+          <div class="book-q-detail">How do I build the specific documented proof of results that makes me impossible to ignore and impossible to negotiate down? Most people are good but they are replaceable. This book shows you how to change that — starting from exactly where you are.</div>
+        </div>
+
+        <div class="book-q">
+          Why is the person earning more than me not working harder than me — and what specifically did they do that I haven't done yet?
+        </div>
+
+      </div>
+
+      <p>14 chapters. 180 pages. Something you can finish in a weekend and start implementing on Monday morning.</p>
+
+      <div class="cta-wrap">
+        <a href="YOUR_SELAR_LINK_HERE" class="cta-book">
+          <div class="cta-book-label">The Book</div>
+          <div class="cta-book-title">You Work Hard But You're Still Broke</div>
+          <div class="cta-book-desc">The complete framework for your specific situation. Written for someone in a 9-5 who wants a real answer, not motivation.</div>
+          <div class="cta-book-btn">Get the Book →</div>
+          <div class="cta-book-micro">Read it in a weekend. Start implementing on Monday.</div>
+        </a>
+      </div>
 
     </div>
 
@@ -428,5 +597,70 @@ src="https://www.facebook.com/tr?id=1269545861555193&ev=PageView&noscript=1"
   </footer>
 
 </div>
+
+<script>
+  const answers = {};
+
+  function answer(qNum, val, btn) {
+    answers[qNum] = val;
+
+    // Update button styles for this question
+    const group = btn.parentElement;
+    group.querySelectorAll('.answer-btn').forEach(b => {
+      b.classList.remove('selected-yes', 'selected-no');
+    });
+    btn.classList.add(val === 'yes' ? 'selected-yes' : 'selected-no');
+
+    // Enable submit when all 5 answered
+    if (Object.keys(answers).length === 5) {
+      document.getElementById('submitBtn').disabled = false;
+    }
+  }
+
+  function showResult() {
+    // Count YESes — yes always means ceiling
+    const yesCount = Object.values(answers).filter(v => v === 'yes').length;
+
+    // Hide all results first
+    document.querySelectorAll('.result-wrap').forEach(r => r.classList.remove('visible'));
+
+    // Show correct result
+    let resultId;
+    if (yesCount >= 4) {
+      resultId = 'result-high';
+    } else if (yesCount >= 2) {
+      resultId = 'result-mid';
+    } else {
+      resultId = 'result-low';
+    }
+
+    const result = document.getElementById(resultId);
+    result.classList.add('visible');
+
+    // Scroll to result
+    setTimeout(() => {
+      result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+
+    // Show book section
+    setTimeout(() => {
+      const bookSection = document.getElementById('bookSection');
+      bookSection.style.display = 'block';
+      setTimeout(() => {
+        bookSection.style.opacity = '1';
+        bookSection.style.transform = 'translateY(0)';
+      }, 50);
+    }, 800);
+
+    // Fire Facebook pixel event
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead', {
+        content_name: 'Ceiling Test Completed',
+        content_category: '9-5 Landing Page'
+      });
+    }
+  }
+</script>
+
 </body>
 </html>
